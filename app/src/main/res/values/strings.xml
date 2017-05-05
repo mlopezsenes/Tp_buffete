@@ -22,6 +22,7 @@
     <string name="IL_Mail_hint">Mail</string>
     <string name="IL_Clave">Password</string>
     <string name="IL_Clave_hint">Password</string>
+    <string name="IL_Recordarme">Remamber me</string>
     <string name="IL_Ingresar">Log-in</string>
     <string name="IL_Registarme">Register</string>
 
