@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.lkdml.tp_buffete.Inicio_Login"
+    tools:context="com.example.lkdml.tp_buffete.inicio.Inicio_Login"
     android:background="@drawable/coffee_bgn">
 
     <TextView

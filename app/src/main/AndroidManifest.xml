@@ -7,8 +7,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Inicio_Login">
+        android:theme="@style/ConActionBar">
+        <activity
+            android:name=".inicio.Inicio_Login"
+            android:theme="@style/ConActionBar">
+
+        </activity>
+        <activity
+            android:name=".registro.Registro_Usuario"
+            android:theme="@style/ConActionBar"></activity>
+        <activity android:name=".menu.menu"
+                    android:label="Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -43,4 +43,10 @@
     <string name="MS_LimpiarPedido">Limpiar Pedido</string>
     <string name="MS_CerrarSesion">Cerrar Sesion</string>
     <string name="MS_Salir">Salir</string>
+
+    <string name="IT_descripcion">Un Saludo</string>
+    <string name="IT_Precio">$ 0.15</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
