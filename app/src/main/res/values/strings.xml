@@ -27,7 +27,7 @@
     <string name="IL_Registarme">Register</string>
 
     <string name="Menu_Titulo">Pidiendo...</string>
-    <string name="Menu_EnviarPedido">Enviar Pedido</string>
+    <string name="Menu_EnviarPedido">Ver Pedido</string>
     <string name="Menu_ImporteEstimado">Imp. Estimado</string>
     <string name="Menu_ElementosSelecionados">Items Seleccionados</string>
     <string name="Menu_Tab1">Café / Bebidas</string>

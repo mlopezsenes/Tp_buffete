@@ -9,15 +9,16 @@
         android:src="@drawable/imagen_ico"
         android:padding="5dp"
         android:layout_weight="0.2"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/ITP_Foto"/>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingEnd="15dp">
+        android:paddingRight="15dp">
         <TextView
-            android:id="@+id/ITM_descripcion"
+            android:id="@+id/ITP_descripcion"
             android:layout_width="@dimen/tab_max_width"
             android:layout_height="wrap_content"
             android:text="@string/IT_descripcion"
@@ -26,20 +27,31 @@
 
         <View style="@style/Divider"/>
         <TextView
-            android:id="@+id/ITM_Precio"
+            android:id="@+id/ITP_Precio"
             android:layout_width="@dimen/tab_max_width"
             android:layout_height="wrap_content"
             android:text="@string/IT_Precio"
             android:gravity="end"/>
     </LinearLayout>
-    <Button
-        android:id="@+id/ITM_btnMas"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|end">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/ITM_btnMenos"
+            />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.2"
-        android:text="+"
-        android:shadowColor="@color/colorPrimaryBlack"
-        android:background="#33a40f"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"
+        android:text="X"
+        android:elevation="16dp"
         />
+    </FrameLayout>
 
 </LinearLayout>

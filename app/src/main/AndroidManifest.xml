@@ -10,20 +10,21 @@
         android:theme="@style/ConActionBar">
         <activity
             android:name=".inicio.Inicio_Login"
-            android:theme="@style/ConActionBar">
-
-        </activity>
+            android:theme="@style/ConActionBar"></activity>
         <activity
             android:name=".registro.Registro_Usuario"
-            android:theme="@style/ConActionBar"></activity>
-        <activity android:name=".menu.menu"
-                    android:label="Menu">
+            android:theme="@style/ConActionBar" />
+        <activity
+            android:name=".menu.menu"
+            android:label="Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".pedido.pedido"
+                    android:label="Mi Pedido"></activity>
     </application>
 
 </manifest>
