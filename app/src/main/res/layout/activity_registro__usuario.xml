@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Nombre"/>
         <EditText
+            android:id="@+id/RU_Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Nombre_hint"
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Apellido"/>
         <EditText
+            android:id="@+id/RU_LastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Apellido_hint"
@@ -72,6 +74,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Dni"/>
         <EditText
+            android:id="@+id/RU_DNI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Dni_hint"
@@ -93,6 +96,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Mail"/>
         <EditText
+            android:id="@+id/RU_Mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Mail_hint"
@@ -112,6 +116,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Clave"/>
         <EditText
+            android:id="@+id/RU_Pass1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Clave_hint"
@@ -132,6 +137,7 @@
             android:layout_height="wrap_content"
             android:text="@string/RU_Reingrese"/>
         <EditText
+            android:id="@+id/RU_pass2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/RU_Reingrese_hint"
@@ -148,6 +154,7 @@
         android:gravity="center"
         android:padding="30dp">
         <Button
+            android:id="@+id/RU_registro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

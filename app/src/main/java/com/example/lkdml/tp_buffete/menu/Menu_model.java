@@ -1,10 +1,12 @@
 package com.example.lkdml.tp_buffete.menu;
 
+import java.io.Serializable;
+
 /**
  * Created by lkdml on 6/5/2017.
  */
 
-public class Menu_model {
+public class Menu_model implements Serializable{
     private String descripcion;
     private Double precio;
 

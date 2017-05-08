@@ -11,14 +11,19 @@ import java.util.List;
  * Created by lkdml on 6/5/2017.
  */
 
-public class Menu_Controller implements IMenuItemClick {
+public class MenuController implements IMenuItemClick {
 
     private List<Menu_model> menu;
-    private List<Menu_model> pedidos;
+
+    public ArrayList<Menu_model> getPedidos() {
+        return pedidos;
+    }
+
+    private ArrayList<Menu_model> pedidos;
     private MenuAdapter mAdapter;
     private IActualizarPedido actualizarPedido;
 
-    public Menu_Controller(MenuAdapter mAdapter,IActualizarPedido actualizarPedido) {
+    public MenuController(MenuAdapter mAdapter, IActualizarPedido actualizarPedido) {
 
         this.pedidos = new ArrayList<Menu_model>();
         this.menu = new ArrayList<Menu_model>();

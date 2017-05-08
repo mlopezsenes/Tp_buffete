@@ -16,18 +16,18 @@ import java.util.List;
 public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
 
     private List<Menu_model> menu;
-    private Menu_Controller mc;
+    private MenuController mc;
     private IMenuItemClick itemListener;
 
     public void setListener(IMenuItemClick itemListener) {
         this.itemListener = itemListener;
     }
 
-    public Menu_Controller getMc() {
+    public MenuController getMc() {
         return mc;
     }
 
-    public void setMc(Menu_Controller mc) {
+    public void setMc(MenuController mc) {
         this.mc = mc;
     }
 
