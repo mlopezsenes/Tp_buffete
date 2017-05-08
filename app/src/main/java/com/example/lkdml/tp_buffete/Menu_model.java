@@ -1,4 +1,4 @@
-package com.example.lkdml.tp_buffete.menu;
+package com.example.lkdml.tp_buffete;
 
 /**
  * Created by lkdml on 6/5/2017.
