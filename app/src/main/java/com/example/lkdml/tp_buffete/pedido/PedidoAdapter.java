@@ -1,4 +1,4 @@
-package com.example.lkdml.tp_buffete.menu;
+package com.example.lkdml.tp_buffete.pedido;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,47 +7,49 @@ import android.view.ViewGroup;
 
 import com.example.lkdml.tp_buffete.Menu_model;
 import com.example.lkdml.tp_buffete.R;
+import com.example.lkdml.tp_buffete.menu.IMenuItemClick;
+import com.example.lkdml.tp_buffete.menu.MenuViewHolder;
+import com.example.lkdml.tp_buffete.menu.MenuController;
 
 import java.util.List;
 
 /**
- * Created by lkdml on 6/5/2017.
+ * Created by lkdml on 7/5/2017.
  */
 
-public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
-
+public class PedidoAdapter  extends RecyclerView.Adapter<PedidoViewHolder>{
     private List<Menu_model> menu;
-    private MenuController mc;
-    private IMenuItemClick itemListener;
+    private PedidoController pc;
+    private IPedidoItemClick itemListener;
 
-    public void setListener(IMenuItemClick itemListener) {
+    public void setListener(IPedidoItemClick itemListener) {
         this.itemListener = itemListener;
     }
 
-    public MenuController getMc() {
-        return mc;
+    public PedidoController getPc() {
+        return pc;
     }
 
-    public void setMc(MenuController mc) {
-        this.mc = mc;
+    public void setPc(PedidoController pc) {
+        this.pc = pc;
     }
 
     public List<Menu_model> getMenu() {
         return menu;
     }
 
-    public MenuAdapter() {
+    public PedidoAdapter() {
     }
 
     @Override
-    public MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public PedidoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu,parent,false);
-        MenuViewHolder mvh = new MenuViewHolder(v,this.itemListener);
-        return mvh;
+        PedidoViewHolder pvh = new PedidoViewHolder(v,this.itemListener);
+        return pvh;
     }
 
     @Override
-    public void onBindViewHolder(MenuViewHolder holder, int position) {
+    public void onBindViewHolder(PedidoViewHolder holder, int position) {
         Menu_model itemMenu = menu.get(position);
         holder.descripcion.setText(itemMenu.getDescripcion());
         holder.precio.setText("$ "+itemMenu.getPrecio().toString());

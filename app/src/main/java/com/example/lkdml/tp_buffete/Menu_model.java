@@ -1,4 +1,4 @@
-package com.example.lkdml.tp_buffete.menu;
+package com.example.lkdml.tp_buffete;
 
 import java.io.Serializable;
 

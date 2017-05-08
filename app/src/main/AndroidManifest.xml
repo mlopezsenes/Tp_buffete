@@ -25,7 +25,7 @@
             android:label="Menu">
 
         </activity>
-        <activity android:name=".pedido.Pedido"
+        <activity android:name=".pedido.pedidos"
                     android:label="Mi Pedido"></activity>
     </application>
 

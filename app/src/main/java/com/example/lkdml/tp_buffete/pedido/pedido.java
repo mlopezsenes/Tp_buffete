@@ -6,11 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.lkdml.tp_buffete.R;
-import com.example.lkdml.tp_buffete.menu.Menu_model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Pedido extends AppCompatActivity {
 

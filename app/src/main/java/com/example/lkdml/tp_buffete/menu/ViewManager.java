@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.lkdml.tp_buffete.Menu_model;
 import com.example.lkdml.tp_buffete.R;
 import com.example.lkdml.tp_buffete.pedido.Pedido;
 
@@ -22,7 +23,7 @@ public class ViewManager implements View.OnClickListener , IActualizarPedido{
     private Activity activity;
     private TextView precio;
     private TextView elementos;
-    private Button registrarme;
+    private Button VerPedido;
     private MenuController mc;
 
 
@@ -39,8 +40,8 @@ public class ViewManager implements View.OnClickListener , IActualizarPedido{
 
         this.precio = (TextView)this.activity.findViewById(R.id.importe);
         this.elementos = (TextView) this.activity.findViewById(R.id.elementos);
-        this.registrarme = (Button)this.activity.findViewById(R.id.MNU_VerPedido);
-        this.registrarme.setOnClickListener(this);
+        this.VerPedido = (Button)this.activity.findViewById(R.id.MNU_VerPedido);
+        this.VerPedido.setOnClickListener(this);
 
 
 
@@ -48,7 +49,7 @@ public class ViewManager implements View.OnClickListener , IActualizarPedido{
 
     @Override
     public void onClick(View v) {
-        if (this.registrarme.getId() == v.getId()){
+        if (this.VerPedido.getId() == v.getId()){
             Intent i = new Intent(activity, Pedido.class);
             Bundle bundle = new Bundle();
             ArrayList<Menu_model> pedidos = this.mc.getPedidos();
@@ -60,6 +61,6 @@ public class ViewManager implements View.OnClickListener , IActualizarPedido{
     @Override
     public void actualizarPedido(Double precio,int elementos) {
         this.elementos.setText(String.valueOf(elementos));
-        this.precio.setText("$ "+String.format("%.2f",precio));
+        this.precio.setText(String.format("$ %.2f",precio));
     }
 }
