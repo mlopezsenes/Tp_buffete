@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
@@ -16,7 +17,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingRight="15dp">
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp">
         <TextView
             android:id="@+id/ITP_descripcion"
             android:layout_width="@dimen/tab_max_width"
@@ -38,17 +40,20 @@
         android:layout_height="match_parent"
         android:layout_gravity="bottom|end">
         <android.support.design.widget.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/ITP_btnMenos"
+
             />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
         android:text="X"
         android:elevation="16dp"
         />

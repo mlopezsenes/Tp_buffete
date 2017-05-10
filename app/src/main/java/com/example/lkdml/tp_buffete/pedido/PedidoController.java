@@ -2,10 +2,9 @@ package com.example.lkdml.tp_buffete.pedido;
 
 import android.util.Log;
 
+
 import com.example.lkdml.tp_buffete.Menu_model;
 import com.example.lkdml.tp_buffete.menu.IActualizarPedido;
-import com.example.lkdml.tp_buffete.menu.IMenuItemClick;
-import com.example.lkdml.tp_buffete.menu.MenuAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,17 +15,31 @@ import java.util.List;
 
 public class PedidoController implements IPedidoItemClick {
 
-    private List<Menu_model> menu;
     private List<Menu_model> pedidos;
     private PedidoAdapter pAdapter;
-    private IActualizarPedido actualizarPedido;
+    private IActualizarPedidos actualizarPedido;
 
-    public PedidoController(PedidoAdapter pAdapter,IActualizarPedido actualizarPedido) {
+    public ViewManager getVm() {
+        return vm;
+    }
 
+    public void setVm(ViewManager vm) {
+        this.vm = vm;
+    }
+
+    private ViewManager vm;
+
+    public PedidoController(PedidoAdapter pAdapter,IActualizarPedidos actualizarPedido) {
+        this.pedidos = new ArrayList<Menu_model>();
+        pedidos.add(new Menu_model("Producto 01",2.4));
+        pedidos.add(new Menu_model("Producto 02",2.4));
+        pedidos.add(new Menu_model("Producto 03",2.4));
+        pedidos.add(new Menu_model("Producto 04",2.4));
+        pedidos.add(new Menu_model("Producto 05",2.4));
 
         this.pAdapter = pAdapter;
-        pAdapter.setMenu(menu);
-        pAdapter.setListener(this);
+        this.pAdapter.setPedidos(this.pedidos);
+        this.pAdapter.setListener(this);
 
         this.actualizarPedido = actualizarPedido;
 
@@ -35,12 +48,12 @@ public class PedidoController implements IPedidoItemClick {
     @Override
     public void onItemClick(int position) {
         Log.d("Se hace click en:", "la posision "+ String.valueOf(position));
-        this.agregarPedido(position);
+        this.pedidos.remove(position);
         this.actualizarPedido.actualizarPedido(this.calcularPrecio(pedidos),pedidos.size());
     }
 
     private void agregarPedido(int position){
-        this.pedidos.add(menu.get(position));
+        this.pedidos.add(pedidos.get(position));
     }
 
     private Double calcularPrecio(List<Menu_model> pedido){
@@ -53,11 +66,17 @@ public class PedidoController implements IPedidoItemClick {
     }
 
 
-    public List<Menu_model> getMenu() {
-        return menu;
+    public List<Menu_model> getPedidos() {
+        return pedidos;
     }
 
-    public void setMenu(List<Menu_model> menu) {
-        this.menu = menu;
+    public void setPedidos(ArrayList<Menu_model> pedidos) {
+        this.pedidos = pedidos;
     }
+
+    public void limpiarPedido (){
+        pedidos.clear();
+        this.actualizarPedido.actualizarPedido(calcularPrecio(this.pedidos),pedidos.size());
+    }
+
 }

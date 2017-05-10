@@ -7,9 +7,6 @@ import android.view.ViewGroup;
 
 import com.example.lkdml.tp_buffete.Menu_model;
 import com.example.lkdml.tp_buffete.R;
-import com.example.lkdml.tp_buffete.menu.IMenuItemClick;
-import com.example.lkdml.tp_buffete.menu.MenuViewHolder;
-import com.example.lkdml.tp_buffete.menu.MenuController;
 
 import java.util.List;
 
@@ -18,12 +15,12 @@ import java.util.List;
  */
 
 public class PedidoAdapter  extends RecyclerView.Adapter<PedidoViewHolder>{
-    private List<Menu_model> menu;
+    private List<Menu_model> pedidos;
     private PedidoController pc;
-    private IPedidoItemClick itemListener;
+    private IPedidoItemClick pedidoItemListener;
 
     public void setListener(IPedidoItemClick itemListener) {
-        this.itemListener = itemListener;
+        this.pedidoItemListener = itemListener;
     }
 
     public PedidoController getPc() {
@@ -34,8 +31,11 @@ public class PedidoAdapter  extends RecyclerView.Adapter<PedidoViewHolder>{
         this.pc = pc;
     }
 
-    public List<Menu_model> getMenu() {
-        return menu;
+    public List<Menu_model> getPedidos() {
+        return pedidos;
+    }
+    public void setPedidos(List<Menu_model> pedidos) {
+        this.pedidos = pedidos;
     }
 
     public PedidoAdapter() {
@@ -43,16 +43,17 @@ public class PedidoAdapter  extends RecyclerView.Adapter<PedidoViewHolder>{
 
     @Override
     public PedidoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu,parent,false);
-        PedidoViewHolder pvh = new PedidoViewHolder(v,this.itemListener);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pedido,parent,false);
+        PedidoViewHolder pvh = new PedidoViewHolder(v,this.pedidoItemListener);
         return pvh;
     }
 
     @Override
     public void onBindViewHolder(PedidoViewHolder holder, int position) {
-        Menu_model itemMenu = menu.get(position);
-        holder.descripcion.setText(itemMenu.getDescripcion());
-        holder.precio.setText("$ "+itemMenu.getPrecio().toString());
+        Menu_model itemMenu = pedidos.get(position);
+
+       // holder.descripcionItem.setText(itemMenu.getDescripcion().toString());
+        holder.precioItem.setText("$ "+itemMenu.getPrecio().toString());
         holder.setPosicion(position);
 
 
@@ -60,10 +61,7 @@ public class PedidoAdapter  extends RecyclerView.Adapter<PedidoViewHolder>{
 
     @Override
     public int getItemCount() {
-        return menu.size();
+        return this.pedidos.size();
     }
 
-    public void setMenu(List<Menu_model> menu) {
-        this.menu = menu;
-    }
 }

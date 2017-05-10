@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.lkdml.tp_buffete.Menu_model;
 import com.example.lkdml.tp_buffete.R;
-import com.example.lkdml.tp_buffete.pedido.Pedido;
+import com.example.lkdml.tp_buffete.pedido.pedidos;
 
 import java.util.ArrayList;
 
@@ -50,10 +50,10 @@ public class ViewManager implements View.OnClickListener , IActualizarPedido{
     @Override
     public void onClick(View v) {
         if (this.VerPedido.getId() == v.getId()){
-            Intent i = new Intent(activity, Pedido.class);
+            Intent i = new Intent(activity, pedidos.class);
             Bundle bundle = new Bundle();
             ArrayList<Menu_model> pedidos = this.mc.getPedidos();
-            bundle.putSerializable("pedido",  pedidos);
+            bundle.putSerializable("pedidos",  pedidos);
             activity.startActivity(i);
         }
 

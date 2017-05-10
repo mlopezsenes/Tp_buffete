@@ -22,11 +22,9 @@
             android:theme="@style/ConActionBar" />
         <activity
             android:name=".menu.Menues"
-            android:label="Menu">
-
-        </activity>
+            android:label="Menu"/>
         <activity android:name=".pedido.pedidos"
-                    android:label="Mi Pedido"></activity>
+                    android:label="Mi Pedido"/>
     </application>
 
 </manifest>

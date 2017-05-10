@@ -5,5 +5,5 @@ package com.example.lkdml.tp_buffete.pedido;
  */
 
 public interface IActualizarPedidos {
-    void actualizarPedido(Double precio, int elementos);
+    void actualizarPedido(Double precio,int elementos);
 }

@@ -1,12 +1,11 @@
 package com.example.lkdml.tp_buffete.pedido;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lkdml.tp_buffete.R;
-import com.example.lkdml.tp_buffete.menu.IMenuItemClick;
 
 /**
  * Created by lkdml on 7/5/2017.
@@ -14,20 +13,20 @@ import com.example.lkdml.tp_buffete.menu.IMenuItemClick;
 
 public class PedidoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView descripcion;
-    public TextView precio;
-    private Button quitar;
+    public TextView descripcionItem;
+    public TextView precioItem;
+    private FloatingActionButton quitar;
     private int posicion;
-    private IPedidoItemClick itemListener;
+    private IPedidoItemClick iteitemPedidoListener;
 
 
-    public PedidoViewHolder(View itemView,IPedidoItemClick itemListener) {
+    public PedidoViewHolder(View itemView,IPedidoItemClick iteitemPedidoListener) {
         super(itemView);
-        this.descripcion = (TextView) itemView.findViewById(R.id.ITM_descripcion);
-        this.precio = (TextView) itemView.findViewById(R.id.ITM_Precio);
-        this.quitar = (Button) itemView.findViewById(R.id.ITP_btnMenos);
+        this.descripcionItem = (TextView) itemView.findViewById(R.id.ITP_descripcion);
+        this.precioItem = (TextView) itemView.findViewById(R.id.ITP_Precio);
+        this.quitar = (FloatingActionButton) itemView.findViewById(R.id.ITP_btnMenos);
         this.quitar.setOnClickListener(this);
-        this.itemListener=itemListener;
+        this.iteitemPedidoListener = iteitemPedidoListener;
     }
 
     public int getPosicion() {
@@ -40,6 +39,6 @@ public class PedidoViewHolder extends RecyclerView.ViewHolder implements View.On
 
     @Override
     public void onClick(View v) {
-        itemListener.onItemClick(posicion);
+        iteitemPedidoListener.onItemClick(posicion);
     }
 }

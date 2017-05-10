@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/Enviar"
+        android:title="@string/MS_EnviarPedido"
+        android:orderInCategory="70"/>
+
+    <item android:id="@+id/deslogueo"
+        android:title="@string/MS_CerrarSesion"
+        android:orderInCategory="100"
+        />
+    <item android:id="@+id/Salir"
+        android:title="@string/MS_Salir"
+        android:orderInCategory="90"/>
+    <item android:id="@+id/Limpiar"
+        android:title="@string/MS_LimpiarPedido"
+        android:orderInCategory="50"/>
+
+</menu>

@@ -36,6 +36,7 @@
 
     <string name="Pedido_Titulo">Mi Pedido</string>
     <string name="Pedido_ImporteEstimado">Importe total:</string>
+    <string name="Pedido_Unidades_Totales">Total de unidades:</string>
     <string name="Pedido_EnviarPedido">Enviar Pedido</string>
 
     <string name="MS_VerPedido">Ver Pedido</string>

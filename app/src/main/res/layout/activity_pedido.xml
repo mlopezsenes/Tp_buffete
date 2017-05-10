@@ -29,10 +29,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
                     android:layout_weight="0.5"
-                    android:text="@string/Menu_ImporteEstimado"/>
+                    android:text="@string/Pedido_ImporteEstimado"/>
 
                 <TextView
-                    android:id="@+id/importe"
+                    android:id="@+id/P_importe"
                     android:gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -47,9 +47,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="@string/Menu_ElementosSelecionados"/>
+                    android:text="@string/Pedido_Unidades_Totales"/>
                 <TextView
-                    android:id="@+id/elementos"
+                    android:id="@+id/P_elementos"
                     android:paddingStart="30dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,13 +60,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Menu_EnviarPedido"
+            android:text="@string/Pedido_EnviarPedido"
+            android:id="@+id/P_enviar"
             />
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/RV_menu">
+        android:id="@+id/RV_pedido">
 
     </android.support.v7.widget.RecyclerView>
 

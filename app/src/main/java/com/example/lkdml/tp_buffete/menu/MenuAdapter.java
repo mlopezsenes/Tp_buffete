@@ -35,6 +35,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
     public List<Menu_model> getMenu() {
         return menu;
     }
+    public void setMenu(List<Menu_model> menu) {
+        this.menu = menu;
+    }
 
     public MenuAdapter() {
     }
@@ -61,7 +64,5 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuViewHolder> {
         return menu.size();
     }
 
-    public void setMenu(List<Menu_model> menu) {
-        this.menu = menu;
-    }
+
 }

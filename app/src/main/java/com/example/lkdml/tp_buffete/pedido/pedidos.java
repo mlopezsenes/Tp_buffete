@@ -2,38 +2,47 @@ package com.example.lkdml.tp_buffete.pedido;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.lkdml.tp_buffete.R;
 
-public class pedidos extends AppCompatActivity implements IActualizarPedidos {
-    private TextView precio;
-    private TextView elementos;
+public class pedidos extends AppCompatActivity {
+
+    private ViewManager vm;
+    private PedidoController pc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedido);
-
-        RecyclerView rv = (RecyclerView) this.findViewById(R.id.RV_menu);
-
-        LinearLayoutManager lm = new LinearLayoutManager(this);
-        rv.setLayoutManager(lm);
-
-        PedidoAdapter adapter = new PedidoAdapter();
-        rv.setAdapter(adapter);
-//        PedidoController pc = new PedidoController(adapter,this);
-
-        this.precio = (TextView)this.findViewById(R.id.importe);
-        this.elementos = (TextView) this.findViewById(R.id.elementos);
+         this.vm = new ViewManager(this);
+        this.pc = vm.getPc();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_pedido, menu);
+        return true;
+    }
 
     @Override
-    public void actualizarPedido(Double precio, int elementos) {
-        this.elementos.setText(String.valueOf(elementos));
-        this.precio.setText("$ "+String.format("%.2f",precio));
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Limpiar:
+                this.pc.limpiarPedido();
+                return true;
+            case R.id.P_enviar:
+                this.vm.onClick(this.vm.getActivity().findViewById(R.id.P_enviar));
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        return true;
     }
 }
